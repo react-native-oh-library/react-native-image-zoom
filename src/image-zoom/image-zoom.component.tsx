@@ -138,6 +138,9 @@ export default class ImageViewer extends React.Component<ImageZoomProps, ImageZo
 
               this.positionX = 0;
               this.positionY = 0;
+
+              // 下滑之后点击双击，充值下滑偏移
+              this.swipeDownOffset = 0;
             } else {
               // 开始在位移地点缩放
               // 记录之前缩放比例
