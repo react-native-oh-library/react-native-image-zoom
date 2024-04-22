@@ -1,11 +1,14 @@
 {
-  "name": "react-native-image-pan-zoom",
+  "name": "@react-native-oh-tpl/react-native-image-pan-zoom",
   "version": "2.1.12-0.0.1",
   "description": "react native image pan zoom",
-  "main": "built/index.js",
-  "types": "built/index.d.ts",
+  "main": "lib/commonjs/index",
+  "types": "lib/typescript/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
   "scripts": {
-    "prepare": "rm -rf built && tsc",
+    "bob": "bob build",
+    "prepare": "npm run bob",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier --write src",
     "start": "tsc -w --outDir demo/built"
@@ -15,7 +18,13 @@
     "url": "https://github.com/ascoders/react-native-image-zoom.git"
   },
   "keywords": [
-    "image-zoom"
+    "image-zoom",
+    "harmony"
+  ],
+  "files": [
+    "harmony",
+    "lib",
+    "src"
   ],
   "author": "ascoders",
   "license": "ISC",
@@ -36,9 +45,24 @@
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-native": "^0.62.2",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.2",
+    "react-native-builder-bob": "^0.20.4"
   },
   "harmony": {
     "alias": "react-native-image-pan-zoom"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
   }
 }
