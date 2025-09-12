@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "react-native-image-pan-zoom",
+        "License": "MIT License",
+        "License File": "LICENSE",
+        "Version Number": "2.1.12",
+        "Owner" : "xiafeng@huawei.com",
+        "Upstream URL": "https://github.com/ascoders/react-native-image-zoom",
+        "Description": "react native image pan zoom."
+    }
+]
